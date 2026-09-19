@@ -226,39 +226,7 @@
   .value p{margin:0;color:var(--ink-soft);font-size:.94rem}
   .value b{color:var(--gold)}
 
-  /* ---------------- KLOOK COUPONS ---------------- */
-  .coupon-sec{background:var(--cream-2)}
-  .klook-tag{
-    display:inline-flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;
-    color:var(--teal-deep);background:#e2f5f7;border-radius:999px;padding:6px 14px;margin-bottom:16px;
-  }
-  .coupons{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:16px}
-  .coupon{
-    position:relative;background:var(--card);border:1px solid var(--line);border-radius:16px;
-    padding:20px 20px 18px 26px;box-shadow:var(--shadow);overflow:hidden;
-  }
-  .coupon::before{content:"";position:absolute;left:0;top:0;bottom:0;width:7px;
-    background:linear-gradient(180deg,var(--gold),var(--gold-soft))}
-  .coupon .cond{font-size:.84rem;color:var(--ink-soft);font-weight:600}
-  .coupon .amt{font-family:"Nanum Myeongjo",serif;font-size:1.55rem;font-weight:800;color:var(--gold);line-height:1.1;margin:3px 0 15px}
-  .code-row{display:flex;align-items:center;gap:8px;background:var(--cream-2);
-    border:1px dashed var(--gold-soft);border-radius:10px;padding:7px 7px 7px 13px}
-  .code-row code{flex:1;font-family:"Pretendard",monospace;font-weight:800;font-size:.98rem;
-    letter-spacing:.01em;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  .copy-btn{flex:none;font-family:inherit;font-size:.8rem;font-weight:700;color:#fff;
-    background:var(--teal);border:none;border-radius:8px;padding:7px 12px;cursor:pointer;transition:background .15s ease}
-  .copy-btn:hover{background:var(--teal-deep)}
-  .copy-btn:focus-visible{outline:3px solid var(--gold-soft);outline-offset:2px}
-  .copy-btn.done{background:var(--gold)}
-  .coupon-note{font-size:.84rem;color:var(--ink-soft);margin:22px 0 26px;max-width:44em}
-  .coupon-note b{color:var(--teal)}
 
-  /* ---------------- FINAL CTA ---------------- */
-  .final{background:linear-gradient(155deg,#0f9fb2,#0b7f8f);color:#eafafb;text-align:center}
-  .final h2{font-family:"Nanum Myeongjo",serif;color:#fff;font-size:clamp(1.5rem,3.6vw,2.05rem);margin:0 0 14px}
-  .final p{color:#d3f1f4;max-width:32em;margin:0 auto 28px}
-  .final .cta{background:var(--gold);box-shadow:0 10px 24px -12px rgba(239,138,31,.85)}
-  .final .cta:hover{background:#d2760f}
 
   /* ---------------- FOOTER ---------------- */
   footer{background:var(--cream-2);color:var(--ink-soft);padding:40px 0;font-size:.86rem}
@@ -437,61 +405,6 @@
   </div>
 </section>
 
-<!-- ============ KLOOK COUPONS ============ -->
-<section class="coupon-sec" id="coupon">
-  <div class="wrap">
-    <p class="eyebrow">클룩 할인코드</p>
-    <h2 class="title">클룩에서 주유패스, 할인코드까지 챙기세요</h2>
-    <span class="klook-tag">Klook 프로모션 코드</span>
-    <p class="sec-desc">클룩(Klook)에서 오사카 주유패스를 결제할 때 아래 코드를 입력하면 결제 금액대별로 추가 할인을 받을 수 있어요. 주유패스 외 다른 티켓·투어를 함께 담아 금액을 맞추면 더 알뜰해요.</p>
-
-    <div class="coupons">
-      <div class="coupon">
-        <div class="cond">5만원 이상 결제 시</div>
-        <div class="amt">2,000원 할인</div>
-        <div class="code-row">
-          <code>세시간전260001</code>
-          <button class="copy-btn" data-code="세시간전260001" onclick="copyCode(this)">복사</button>
-        </div>
-      </div>
-      <div class="coupon">
-        <div class="cond">10만원 이상 결제 시</div>
-        <div class="amt">3,000원 할인</div>
-        <div class="code-row">
-          <code>세시간전260002</code>
-          <button class="copy-btn" data-code="세시간전260002" onclick="copyCode(this)">복사</button>
-        </div>
-      </div>
-      <div class="coupon">
-        <div class="cond">20만원 이상 결제 시</div>
-        <div class="amt">7,000원 할인</div>
-        <div class="code-row">
-          <code>세시간전260003</code>
-          <button class="copy-btn" data-code="세시간전260003" onclick="copyCode(this)">복사</button>
-        </div>
-      </div>
-    </div>
-
-    <p class="coupon-note"><b>사용 방법</b> · 클룩 결제 화면의 <b>프로모션 코드</b> 입력란에 코드를 붙여넣으면 할인이 적용돼요. 코드는 결제 금액 조건과 클룩 정책에 따라 조기 마감되거나 변경될 수 있어요.</p>
-
-    <a class="cta" href="https://3ha.in/r/536449" target="_blank" rel="noopener"
-       data-book="osaka_amazing_pass" onclick="trackBooking('osaka_amazing_pass','coupon')">
-      클룩에서 주유패스 구매하기 <span class="arw">→</span>
-    </a>
-  </div>
-</section>
-
-<!-- ============ FINAL CTA ============ -->
-<section class="final">
-  <div class="wrap">
-    <h2>동선까지 짰다면, 이제 패스만 준비하면 끝</h2>
-    <p>클룩에서 사전 구매하면 QR 하나로 교통·입장이 전부 해결돼요. 결제할 때 위 할인코드 잊지 마세요.</p>
-    <a class="cta" href="https://3ha.in/r/536449" target="_blank" rel="noopener"
-       data-book="osaka_amazing_pass" onclick="trackBooking('osaka_amazing_pass','final')">
-      클룩에서 주유패스 구매하기 <span class="arw">→</span>
-    </a>
-  </div>
-</section>
 
 <!-- ============ FOOTER ============ -->
 <footer>
@@ -533,28 +446,6 @@
     });
   });
 
-  // 클룩 할인코드 복사
-  function copyCode(btn){
-    var code = btn.dataset.code;
-    var done = function(){
-      var orig = btn.textContent;
-      btn.textContent = '복사됨'; btn.classList.add('done');
-      setTimeout(function(){ btn.textContent = orig; btn.classList.remove('done'); }, 1600);
-      if (typeof gtag === 'function'){
-        gtag('event', 'click_coupon', { coupon_code: code, item_category: 'osaka_amazing_pass' });
-      }
-    };
-    if (navigator.clipboard && navigator.clipboard.writeText){
-      navigator.clipboard.writeText(code).then(done).catch(fallback);
-    } else { fallback(); }
-    function fallback(){
-      var t = document.createElement('textarea');
-      t.value = code; t.style.position='fixed'; t.style.opacity='0';
-      document.body.appendChild(t); t.select();
-      try{ document.execCommand('copy'); }catch(e){}
-      document.body.removeChild(t); done();
-    }
-  }
 
   // GA4 예약 클릭 이벤트
   function trackBooking(name, placement){
